@@ -1,0 +1,897 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/liggleplim/DrinkMate/data/schema/chain.schema.json",
+  "title": "DrinkMate Chain Menu Schema",
+  "description": "Chain-agnostic schema for a single coffee chain menu file. Every item uses a permanent lowercase slug ID unique across the entire chain. Unconfirmed facts must be null or marked verified: false with a verificationNote — never invented. verified: true means EVERY non-null field on that item was confirmed from an official source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "meta",
+    "sizes",
+    "categories",
+    "bases",
+    "milks",
+    "modifiers",
+    "rules",
+    "seasonal"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "Chain-level metadata, provenance, and schema version.",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "region",
+        "currency",
+        "schemaVersion",
+        "lastVerified",
+        "sources",
+        "confidence",
+        "brandColor"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/slug",
+          "description": "Permanent chain slug matching the JSON filename (e.g., starbucks)."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "type": "string",
+          "minLength": 2,
+          "description": "Required region code (e.g., US) because menus differ by country."
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$",
+          "description": "ISO 4217 currency code (e.g., USD)."
+        },
+        "schemaVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+          "description": "Semantic schema version. Phase 1 is 1.0.0."
+        },
+        "lastVerified": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "description": "ISO date (YYYY-MM-DD) when the menu was last verified."
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Chain-level list of official source URLs used."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "brandColor": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "Primary brand hex color."
+        }
+      }
+    },
+    "sizes": {
+      "type": "array",
+      "description": "Available drink sizes for this chain. Volumes may vary by temperature (e.g., hot vs iced vs blended).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "volumeOz",
+          "supportedTemperatures"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "volumeOz": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Default volume in fl oz, or null if temperature-specific or unconfirmed."
+          },
+          "volumeOzByTemperature": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Temperature-specific volumes in fl oz. Keys are hot, iced, blended (each nullable). Any temperature not in supportedTemperatures must be null or omitted. Never assume blended equals iced.",
+            "additionalProperties": false,
+            "properties": {
+              "hot": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "iced": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "blended": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            }
+          },
+          "supportedTemperatures": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/temperature"
+            }
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "true means EVERY non-null field on this item was confirmed from an official source."
+          },
+          "verificationNote": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "description": "Plain grouping labels for bases. Category IDs are lowercase slugs (not a closed enum) and carry no temperature flags; base.supportedTemperatures is the single source of truth.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "bases": {
+      "type": "array",
+      "description": "Starting handcrafted drinks.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "categoryId",
+          "availableSizes",
+          "supportedTemperatures",
+          "defaultRecipe",
+          "isSeasonal"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "categoryId": {
+            "$ref": "#/$defs/slug"
+          },
+          "availableSizes": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/slug"
+            }
+          },
+          "supportedTemperatures": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/temperature"
+            },
+            "description": "Single source of truth for which temperatures this base supports."
+          },
+          "basePriceBySize": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Optional map of sizeId -> base price (or null when unconfirmed or store-dependent).",
+            "additionalProperties": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "defaultRecipe": {
+            "type": "object",
+            "description": "Defaults for this drink AS IT COMES by default (distinct from modifiers[].defaultCountBySize, which applies only when a user adds a modifier not already included in the base).",
+            "additionalProperties": false,
+            "required": [
+              "milkId",
+              "shotsByTemperature",
+              "modifiers"
+            ],
+            "properties": {
+              "milkId": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Default milk slug ID. null explicitly means 'no milk' (never 'unspecified')."
+              },
+              "shotsByTemperature": {
+                "type": "object",
+                "description": "Single source of truth for default espresso shots, keyed by temperature (subset of base.supportedTemperatures) then valid sizeId for that temperature. Every valid temperature+size combination must be present. Use 0 for 'no espresso in this drink by design' (e.g., tea or refresher); use null ONLY for 'unconfirmed' (with verified: false and a verificationNote). Invalid temperature+size combinations are forbidden as keys.",
+                "additionalProperties": false,
+                "properties": {
+                  "hot": {
+                    "$ref": "#/$defs/sizeIntMap"
+                  },
+                  "iced": {
+                    "$ref": "#/$defs/sizeIntMap"
+                  },
+                  "blended": {
+                    "$ref": "#/$defs/sizeIntMap"
+                  }
+                }
+              },
+              "modifiers": {
+                "type": "array",
+                "description": "Modifiers included in the drink by default. Each modifierId may appear at most once.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "modifierId"
+                  ],
+                  "properties": {
+                    "modifierId": {
+                      "$ref": "#/$defs/slug"
+                    },
+                    "countByTemperatureAndSize": {
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "description": "For selectionMode='count' modifiers: temperature -> valid sizeId -> integer >= 0 or null. Use 0 for 'none by design' and null ONLY for 'unconfirmed' (with verified: false and a note). Invalid temperature+size combinations are forbidden as keys.",
+                      "additionalProperties": false,
+                      "properties": {
+                        "hot": {
+                          "$ref": "#/$defs/sizeIntMap"
+                        },
+                        "iced": {
+                          "$ref": "#/$defs/sizeIntMap"
+                        },
+                        "blended": {
+                          "$ref": "#/$defs/sizeIntMap"
+                        }
+                      }
+                    },
+                    "defaultLevel": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "enum": [
+                        "light",
+                        "regular",
+                        "extra",
+                        null
+                      ],
+                      "description": "For selectionMode='level' modifiers."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "isSeasonal": {
+            "type": "boolean"
+          },
+          "iconKey": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Reserved for visual layer. Leave null in Phase 1."
+          },
+          "colorHex": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "description": "Reserved for visual layer liquid color. Leave null in Phase 1."
+          },
+          "nutrition": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/nutrition"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "true means EVERY non-null field on this item was confirmed from an official source."
+          },
+          "verificationNote": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isDairyFree": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Whether the default recipe as served is dairy-free (not necessarily vegan, e.g., honey). Leave null until confirmed from official ingredient data."
+          }
+        }
+      }
+    },
+    "milks": {
+      "type": "array",
+      "description": "Available milk and cream options.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "upchargeAmount"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "upchargeAmount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "isDairyFree": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Leave null until confirmed from official allergen/ingredient data."
+          },
+          "iconKey": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Reserved for visual layer. Leave null in Phase 1."
+          },
+          "colorHex": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "description": "Reserved for visual layer. Leave null in Phase 1."
+          },
+          "nutrition": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/nutrition"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "true means EVERY non-null field on this item was confirmed from an official source."
+          },
+          "verificationNote": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "modifiers": {
+      "type": "array",
+      "description": "One flat list for syrups, sauces, toppings, foams, drizzles, shots, and add-ins.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "type",
+          "selectionMode",
+          "unit",
+          "pricingModel",
+          "upchargeAmount",
+          "defaultCountBySize",
+          "maxCount",
+          "isSugarFree",
+          "isSeasonal"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "syrup",
+              "sauce",
+              "topping",
+              "foam",
+              "drizzle",
+              "shot",
+              "other"
+            ]
+          },
+          "selectionMode": {
+            "type": "string",
+            "enum": [
+              "count",
+              "level"
+            ],
+            "description": "How the customer selects amount: numeric count or qualitative level (light/regular/extra)."
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "pump",
+              "scoop",
+              "drizzle",
+              "shot",
+              "other"
+            ],
+            "description": "Physical unit of the modifier."
+          },
+          "pricingModel": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "flat",
+              "per_unit",
+              null
+            ],
+            "description": "flat = one fee regardless of count; per_unit = fee per count; null = unknown."
+          },
+          "upchargeAmount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "defaultCountBySize": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Applies ONLY when a user adds a count modifier that is not already in base.defaultRecipe. Must be null when selectionMode is 'level'.",
+            "additionalProperties": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "maxCount": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1,
+            "description": "Maximum allowed count for count modifiers. Must be null when selectionMode is 'level'."
+          },
+          "isSugarFree": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Leave null until confirmed from official nutrition/ingredient data."
+          },
+          "isSeasonal": {
+            "type": "boolean"
+          },
+          "iconKey": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Reserved for visual layer. Leave null in Phase 1."
+          },
+          "colorHex": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "description": "Reserved for visual layer. Leave null in Phase 1."
+          },
+          "nutrition": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/nutrition"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "true means EVERY non-null field on this item was confirmed from an official source."
+          },
+          "verificationNote": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isDairyFree": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Whether this modifier is dairy-free (not necessarily vegan, e.g., honey). Leave null until confirmed from official ingredient data."
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "description": "Constraints blocking impossible drinks (Phase 2; may be empty in Phase 1).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "appliesTo",
+          "message"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "appliesTo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/slug"
+            }
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "seasonal": {
+      "type": "array",
+      "description": "Timing metadata referencing seasonal bases or modifiers (Phase 3; may be empty in Phase 1).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "itemId",
+          "itemKind",
+          "startDate",
+          "endDate",
+          "status"
+        ],
+        "properties": {
+          "itemId": {
+            "$ref": "#/$defs/slug"
+          },
+          "itemKind": {
+            "type": "string",
+            "enum": [
+              "base",
+              "modifier"
+            ]
+          },
+          "startDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "endDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "upcoming",
+              "retired"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "temperature": {
+      "type": "string",
+      "enum": [
+        "hot",
+        "iced",
+        "blended"
+      ]
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "light",
+        "regular",
+        "extra"
+      ]
+    },
+    "sizeIntMap": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      }
+    },
+    "nutrition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "calories",
+        "sugarGrams",
+        "caffeineMg",
+        "fatGrams",
+        "proteinGrams",
+        "basis"
+      ],
+      "properties": {
+        "calories": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sugarGrams": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "caffeineMg": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fatGrams": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "proteinGrams": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Size or unit that these nutrition numbers describe (e.g., 'grande-hot' or 'per-pump')."
+        }
+      }
+    },
+    "drinkState": {
+      "title": "DrinkMate Saved Drink State Contract (v1.0.0)",
+      "description": "Locked Phase 1 contract for saved drinks in localStorage and visual-layer rendering. Frozen once the app first saves a drink. modifiers[] represents the FULL final recipe as totals (never deltas): selecting a base copies its defaults into modifiers[] (including shots as an 'espresso-shot' entry with total count), and an absent entry means none ('No' for a level option is an absent entry). milkId is the final milk, where null explicitly means 'no milk'.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "chainId",
+        "baseId",
+        "sizeId",
+        "temperature",
+        "milkId",
+        "modifiers",
+        "notes",
+        "createdAt",
+        "updatedAt",
+        "schemaVersion"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chainId": {
+          "$ref": "#/$defs/slug"
+        },
+        "baseId": {
+          "$ref": "#/$defs/slug"
+        },
+        "sizeId": {
+          "$ref": "#/$defs/slug"
+        },
+        "temperature": {
+          "$ref": "#/$defs/temperature"
+        },
+        "milkId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Final selected milk ID, or null explicitly meaning 'no milk'."
+        },
+        "modifiers": {
+          "type": "array",
+          "description": "FULL final recipe as totals (never deltas). Shots are stored as an 'espresso-shot' entry with total count. An absent entry means none. Each modifierId may appear at most once.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "modifierId",
+              "count",
+              "level"
+            ],
+            "properties": {
+              "modifierId": {
+                "$ref": "#/$defs/slug"
+              },
+              "count": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1
+              },
+              "level": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "light",
+                  "regular",
+                  "extra",
+                  null
+                ]
+              }
+            }
+          }
+        },
+        "options": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Optional reserved field for Phase 2 customization groups (e.g., Espresso Roast, Shot Pull, Ice, Foam). Default null in Phase 1.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "groupId",
+              "choiceId"
+            ],
+            "properties": {
+              "groupId": {
+                "$ref": "#/$defs/slug"
+              },
+              "choiceId": {
+                "$ref": "#/$defs/slug"
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updatedAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        }
+      }
+    }
+  }
+}

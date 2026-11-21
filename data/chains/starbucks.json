@@ -1,0 +1,3348 @@
+{
+  "meta": {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "region": "US",
+    "currency": "USD",
+    "schemaVersion": "1.1.0",
+    "lastVerified": "2026-11-20",
+    "sources": [
+      "https://www.starbucks.com/menu/product/480/hot",
+      "https://www.starbucks.com/menu/product/407/hot",
+      "https://www.starbucks.com/menu/product/407/iced",
+      "https://www.starbucks.com/menu/product/406/hot",
+      "https://www.starbucks.com/menu/product/406/iced",
+      "https://www.starbucks.com/menu/product/408/hot",
+      "https://www.starbucks.com/menu/product/408/iced",
+      "https://www.starbucks.com/menu/product/420/hot",
+      "https://www.starbucks.com/menu/product/420/iced",
+      "https://www.starbucks.com/menu/product/413/hot",
+      "https://www.starbucks.com/menu/product/413/iced",
+      "https://www.starbucks.com/menu/product/409/hot",
+      "https://www.starbucks.com/menu/product/565/hot",
+      "https://www.starbucks.com/menu/product/565/iced",
+      "https://www.starbucks.com/menu/product/414/hot",
+      "https://www.starbucks.com/menu/product/2123425/iced",
+      "https://www.starbucks.com/menu/product/2123431/iced",
+      "https://www.starbucks.com/menu/product/2123805/iced",
+      "https://www.starbucks.com/menu/product/496/hot",
+      "https://www.starbucks.com/menu/product/517/hot",
+      "https://www.starbucks.com/menu/product/28517/hot",
+      "https://www.starbucks.com/menu/product/2121255/iced",
+      "https://www.starbucks.com/menu/product/2121859/iced",
+      "https://www.starbucks.com/menu/product/2122795/iced",
+      "https://www.starbucks.com/menu/product/41180/iced",
+      "https://www.starbucks.com/menu/product/2123863/iced",
+      "https://www.starbucks.com/menu/product/466/hot",
+      "https://www.starbucks.com/menu/product/468/hot",
+      "https://www.starbucks.com/menu/product/41184/iced",
+      "https://www.starbucks.com/menu/product/2121342/iced",
+      "https://www.starbucks.com/menu/product/2122275/iced",
+      "https://www.starbucks.com/menu/product/2122725/iced",
+      "https://www.starbucks.com/menu/product/2122756/iced",
+      "https://www.starbucks.com/menu/product/424/iced",
+      "https://www.starbucks.com/menu/product/426/iced",
+      "https://www.starbucks.com/menu/product/440/iced",
+      "https://www.starbucks.com/menu/product/471/hot",
+      "https://about.starbucks.com/stories/2026/starbucks-holiday-menu-arrives-nov-5-with-new-and-returning-drinks-treats-holiday-cups-and-merchandise/",
+      "https://about.starbucks.com/press/2024/starbucks-announces-removal-of-extra-charge-for-non-dairy-milk-starting-nov-7/",
+      "https://menuwithprice.net/starbucks/menu-prices/",
+      "https://roastrig.com/starbucks-menu-prices/",
+      "https://www.takeroon.com/blog/starbucks-caffeine-content"
+    ],
+    "confidence": "medium",
+    "brandColor": "#00704A"
+  },
+  "sizes": [
+    {
+      "id": "short",
+      "name": "Short",
+      "volumeOz": 8,
+      "volumeOzByTemperature": {
+        "hot": 8,
+        "iced": null,
+        "blended": null
+      },
+      "supportedTemperatures": [
+        "hot"
+      ],
+      "verified": true,
+      "verificationNote": "Verified 8 fl oz hot-only on starbucks.com (2026-11-20)."
+    },
+    {
+      "id": "tall",
+      "name": "Tall",
+      "volumeOz": 12,
+      "volumeOzByTemperature": {
+        "hot": 12,
+        "iced": 12,
+        "blended": 12
+      },
+      "supportedTemperatures": [
+        "hot",
+        "iced",
+        "blended"
+      ],
+      "verified": true,
+      "verificationNote": "Verified 12 fl oz hot, iced, and blended (Frappuccino pages 424/426/440) on starbucks.com (2026-11-20)."
+    },
+    {
+      "id": "grande",
+      "name": "Grande",
+      "volumeOz": 16,
+      "volumeOzByTemperature": {
+        "hot": 16,
+        "iced": 16,
+        "blended": 16
+      },
+      "supportedTemperatures": [
+        "hot",
+        "iced",
+        "blended"
+      ],
+      "verified": true,
+      "verificationNote": "Verified 16 fl oz hot, iced, and blended (Frappuccino pages 424/426/440) on starbucks.com (2026-11-20)."
+    },
+    {
+      "id": "venti",
+      "name": "Venti",
+      "volumeOz": null,
+      "volumeOzByTemperature": {
+        "hot": 20,
+        "iced": 24,
+        "blended": 24
+      },
+      "supportedTemperatures": [
+        "hot",
+        "iced",
+        "blended"
+      ],
+      "verified": true,
+      "verificationNote": "Verified 20 fl oz hot, 24 fl oz iced, and 24 fl oz blended (Frappuccino pages 424/426/440) on starbucks.com (2026-11-20)."
+    },
+    {
+      "id": "trenta",
+      "name": "Trenta",
+      "volumeOz": 30,
+      "volumeOzByTemperature": {
+        "hot": null,
+        "iced": 30,
+        "blended": null
+      },
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "verified": true,
+      "verificationNote": "Verified 30 fl oz iced-only on Iced Coffee, Cold Brew, and Refreshers pages on starbucks.com (2026-11-20)."
+    }
+  ],
+  "categories": [
+    {
+      "id": "hot-coffee",
+      "name": "Hot Coffee"
+    },
+    {
+      "id": "espresso",
+      "name": "Espresso"
+    },
+    {
+      "id": "cold-brew",
+      "name": "Cold Brew"
+    },
+    {
+      "id": "iced-coffee",
+      "name": "Iced Coffee"
+    },
+    {
+      "id": "tea",
+      "name": "Tea"
+    },
+    {
+      "id": "refresher",
+      "name": "Refreshers"
+    },
+    {
+      "id": "blended",
+      "name": "Frappuccino Blended"
+    },
+    {
+      "id": "other",
+      "name": "Other"
+    }
+  ],
+  "milks": [
+    {
+      "id": "2-percent-milk",
+      "name": "2% Milk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Dairy milk (2% Milk) — starbucks.com/menu/product/407/hot/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 120,
+        "sugarGrams": 12,
+        "caffeineMg": 0,
+        "fatGrams": 5,
+        "proteinGrams": 8,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "almondmilk",
+      "name": "Almondmilk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Non-dairy plant milk — starbucks.com/menu/product/490/iced. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 60,
+        "sugarGrams": 3,
+        "caffeineMg": 0,
+        "fatGrams": 2.5,
+        "proteinGrams": 2,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "coconutmilk",
+      "name": "Coconutmilk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "WATER, COCONUT CREAM, CANE SUGAR — verified dairy-free on starbucks.com/menu/product/40499/iced/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 80,
+        "sugarGrams": 8,
+        "caffeineMg": 0,
+        "fatGrams": 5,
+        "proteinGrams": 1,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "breve-half-and-half",
+      "name": "Breve (Half & Half)",
+      "upchargeAmount": 0.7,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Dairy cream & milk (Half & Half) — starbucks.com/menu/product/407/hot. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 315,
+        "sugarGrams": 10,
+        "caffeineMg": 0,
+        "fatGrams": 28,
+        "proteinGrams": 7,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "heavy-cream",
+      "name": "Heavy Cream",
+      "upchargeAmount": 0.7,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Dairy cream (Heavy Cream) — starbucks.com/menu/product/407/hot. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 800,
+        "sugarGrams": 0,
+        "caffeineMg": 0,
+        "fatGrams": 80,
+        "proteinGrams": 5,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "nonfat-milk",
+      "name": "Nonfat Milk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Dairy milk (Nonfat Milk) — starbucks.com/menu/product/490/iced. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 80,
+        "sugarGrams": 12,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 8,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "oatmilk",
+      "name": "Oatmilk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "WATER, OATS, CANOLA OIL — verified dairy-free on starbucks.com/menu/product/2123431/iced/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": 7,
+        "caffeineMg": 0,
+        "fatGrams": 7,
+        "proteinGrams": 3,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "protein-boosted-milk",
+      "name": "Protein-boosted Milk",
+      "upchargeAmount": 1.0,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains MILK and WHEY PROTEIN ISOLATE [MILK] — verified on starbucks.com/menu/product/28501/hot/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 180,
+        "sugarGrams": 12,
+        "caffeineMg": 0,
+        "fatGrams": 4,
+        "proteinGrams": 24,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "soymilk",
+      "name": "Soymilk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "WATER, SOYBEANS — verified dairy-free in ingredient statement on starbucks.com/menu/product/2123879/iced/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 130,
+        "sugarGrams": 13,
+        "caffeineMg": 0,
+        "fatGrams": 4,
+        "proteinGrams": 7,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "nondairy-vanilla-sweet-cream",
+      "name": "Nondairy Vanilla Sweet Cream",
+      "upchargeAmount": 0.0,
+      "isDairyFree": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "SOYMILK + OATMILK base, no dairy — verified on starbucks.com/menu/product/2123879/iced/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 170,
+        "sugarGrams": 18,
+        "caffeineMg": 0,
+        "fatGrams": 9,
+        "proteinGrams": 2,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "vanilla-sweet-cream",
+      "name": "Vanilla Sweet Cream",
+      "upchargeAmount": 1.25,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains Cream and Milk — verified on starbucks.com/menu/product/2121859/iced/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 280,
+        "sugarGrams": 26,
+        "caffeineMg": 0,
+        "fatGrams": 18,
+        "proteinGrams": 5,
+        "basis": "per-8oz"
+      }
+    },
+    {
+      "id": "whole-milk",
+      "name": "Whole Milk",
+      "upchargeAmount": 0.0,
+      "isDairyFree": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Dairy milk (Whole Milk) — starbucks.com/menu/product/565/hot/nutrition. Pricing remains null. Estimated US average upchargeAmount & per-8oz nutrition (non-dairy $0 at company-operated US stores since Nov 2024).",
+      "nutrition": {
+        "calories": 150,
+        "sugarGrams": 12,
+        "caffeineMg": 0,
+        "fatGrams": 8,
+        "proteinGrams": 8,
+        "basis": "per-8oz"
+      }
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "espresso-shot",
+      "name": "Espresso Shot",
+      "type": "shot",
+      "selectionMode": "count",
+      "unit": "shot",
+      "pricingModel": "per_unit",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Brewed Espresso — verified dairy-free on starbucks.com/menu/product/406/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 5,
+        "sugarGrams": 0,
+        "caffeineMg": 75,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-shot"
+      }
+    },
+    {
+      "id": "vanilla-syrup",
+      "name": "Vanilla Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Water, Natural Flavors — verified dairy-free on starbucks.com/menu/product/413/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "classic-syrup",
+      "name": "Classic Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.0,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Water, Natural Flavors — verified dairy-free on starbucks.com/menu/product/466/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "brown-sugar-syrup",
+      "name": "Brown Sugar Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Invert Sugar, Brown Sugar, Water — verified dairy-free on starbucks.com/menu/product/2123431/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 10,
+        "sugarGrams": 3,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "caramel-syrup",
+      "name": "Caramel Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Water, Natural Flavor — verified dairy-free on starbucks.com/menu/product/2122795/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "cinnamon-dolce-syrup",
+      "name": "Cinnamon Dolce Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Water, Natural Flavor — verified dairy-free on starbucks.com/menu/product/414/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "hazelnut-syrup",
+      "name": "Hazelnut Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Invert Sugar, Sugar, Water — verified dairy-free on starbucks.com/menu/product/2123805/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "peppermint-syrup",
+      "name": "Peppermint Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Water, Natural Flavor — verified dairy-free on starbucks.com/menu/product/496/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "sugar-cookie-syrup",
+      "name": "Sugar Cookie Syrup",
+      "type": "syrup",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Water, Natural Flavor — verified dairy-free on starbucks.com/menu/product/28517/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "mocha-sauce",
+      "name": "Mocha Sauce",
+      "type": "sauce",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Water, Sugar, Cocoa — verified dairy-free on starbucks.com/menu/product/408/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 25,
+        "sugarGrams": 5,
+        "caffeineMg": 6,
+        "fatGrams": 0.5,
+        "proteinGrams": 0.5,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "white-chocolate-mocha-sauce",
+      "name": "White Chocolate Mocha Sauce",
+      "type": "sauce",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains CONDENSED SKIM MILK — verified on starbucks.com/menu/product/420/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 60,
+        "sugarGrams": 11,
+        "caffeineMg": 0,
+        "fatGrams": 2,
+        "proteinGrams": 1,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "caramel-brulee-sauce",
+      "name": "Caramel Brulée Sauce",
+      "type": "sauce",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains SKIM MILK POWDER — verified on starbucks.com/menu/product/517/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 45,
+        "sugarGrams": 9,
+        "caffeineMg": 0,
+        "fatGrams": 1,
+        "proteinGrams": 0.5,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "salted-caramel-cream-cold-foam",
+      "name": "Salted Caramel Cream Cold Foam",
+      "type": "foam",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains VANILLA SWEET CREAM (Cream, Milk) — verified on starbucks.com/menu/product/2122795/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": 12,
+        "caffeineMg": 0,
+        "fatGrams": 10,
+        "proteinGrams": 1,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "velvet-mascarpone-cold-foam",
+      "name": "Velvet Mascarpone Cold Foam",
+      "type": "foam",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains Cream, Milk, Dried Whey (Milk), Skim Milk Powder — verified on starbucks.com/menu/product/41180/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 160,
+        "sugarGrams": 15,
+        "caffeineMg": 0,
+        "fatGrams": 11,
+        "proteinGrams": 1,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "caramel-brulee-cream-cold-foam",
+      "name": "Caramel Brulée Cream Cold Foam",
+      "type": "foam",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Blended with dairy Vanilla Sweet Cream — verified on about.starbucks.com (Nov 4, 2026). Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": 14,
+        "caffeineMg": 0,
+        "fatGrams": 9,
+        "proteinGrams": 1,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "gingerbread-cream-cold-foam",
+      "name": "Gingerbread Cream Cold Foam",
+      "type": "foam",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Blended with dairy Vanilla Sweet Cream — verified on about.starbucks.com (Nov 4, 2026). Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 130,
+        "sugarGrams": 12,
+        "caffeineMg": 0,
+        "fatGrams": 9,
+        "proteinGrams": 1,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "peppermint-chocolate-cream-cold-foam",
+      "name": "Peppermint Chocolate Cream Cold Foam",
+      "type": "foam",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Blended with dairy Vanilla Sweet Cream — verified on about.starbucks.com (Nov 4, 2026). Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 150,
+        "sugarGrams": 14,
+        "caffeineMg": 5,
+        "fatGrams": 10,
+        "proteinGrams": 1,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "sugar-cookie-cream-cold-foam",
+      "name": "Sugar Cookie Cream Cold Foam",
+      "type": "foam",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 1.25,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Blended with dairy Vanilla Sweet Cream — verified on about.starbucks.com (Nov 4, 2026). Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": 13,
+        "caffeineMg": 0,
+        "fatGrams": 9,
+        "proteinGrams": 1,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "caramel-drizzle",
+      "name": "Caramel Drizzle",
+      "type": "drizzle",
+      "selectionMode": "level",
+      "unit": "drizzle",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.6,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Caramel Sauce contains Butter (Milk), Heavy Cream, Nonfat Dry Milk — verified on starbucks.com/menu/product/413/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 2,
+        "caffeineMg": 0,
+        "fatGrams": 0.5,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "mocha-drizzle",
+      "name": "Mocha Drizzle",
+      "type": "drizzle",
+      "selectionMode": "level",
+      "unit": "drizzle",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.6,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "isDairyFree left null until Hot Chocolate /nutrition ingredient list is verified. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": null,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 3,
+        "caffeineMg": 3,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "whipped-cream",
+      "name": "Whipped Cream",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.0,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains CREAM — verified on starbucks.com/menu/product/408/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 80,
+        "sugarGrams": 2,
+        "caffeineMg": 0,
+        "fatGrams": 8,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "cinnamon-powder",
+      "name": "Cinnamon Powder",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.0,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "CINNAMON — verified dairy-free on starbucks.com/menu/product/2123431/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 0,
+        "sugarGrams": 0,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "cinnamon-dolce-sprinkles",
+      "name": "Cinnamon Dolce Sprinkles",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains EXTRACTIVES OF BUTTER (MILK) — verified on starbucks.com/menu/product/414/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 10,
+        "sugarGrams": 2,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "chocolate-curls-topping",
+      "name": "Chocolate Curls Topping",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Contains MILK — verified on starbucks.com/menu/product/496/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 2,
+        "caffeineMg": 2,
+        "fatGrams": 1,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "caramel-brulee-topping",
+      "name": "Caramel Brulée Topping",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Corn Syrup, Natural Flavor, Fruit/Veg Colors — verified dairy-free on starbucks.com/menu/product/517/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 3,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "red-and-green-sprinkle-topping",
+      "name": "Red and Green Sprinkle Topping",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Corn Starch, Natural Flavor, Veg Colors — verified dairy-free on starbucks.com/menu/product/28517/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 10,
+        "sugarGrams": 2,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "cocoa-cookie-dusting",
+      "name": "Cocoa Cookie Dusting",
+      "type": "topping",
+      "selectionMode": "level",
+      "unit": "other",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Wheat Flour, Sugar, Palm Oil, Cocoa Powder, Coffee — verified dairy-free on starbucks.com/menu/product/41180/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 2,
+        "caffeineMg": 2,
+        "fatGrams": 0.5,
+        "proteinGrams": 0,
+        "basis": "per-serving"
+      }
+    },
+    {
+      "id": "chai-concentrate",
+      "name": "Chai",
+      "type": "other",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.8,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Dairy-free (note: contains HONEY, not vegan) — verified on starbucks.com/menu/product/466/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 25,
+        "sugarGrams": 6,
+        "caffeineMg": 15,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "matcha-powder",
+      "name": "Matcha Powder",
+      "type": "other",
+      "selectionMode": "count",
+      "unit": "scoop",
+      "pricingModel": "per_unit",
+      "upchargeAmount": 1.0,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "GROUND GREEN TEA — verified dairy-free on starbucks.com/menu/product/468/hot/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 0,
+        "caffeineMg": 22,
+        "fatGrams": 0,
+        "proteinGrams": 1,
+        "basis": "per-scoop"
+      }
+    },
+    {
+      "id": "vanilla-bean-powder",
+      "name": "Vanilla Bean Powder",
+      "type": "other",
+      "selectionMode": "count",
+      "unit": "scoop",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Sugar, Natural Flavor, Vanilla Bean Pieces — verified dairy-free on starbucks.com/menu/product/440/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 20,
+        "sugarGrams": 5,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-scoop"
+      }
+    },
+    {
+      "id": "frappuccino-roast",
+      "name": "Frappuccino® Roast",
+      "type": "other",
+      "selectionMode": "count",
+      "unit": "pump",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "isDairyFree left null until Coffee Frappuccino /nutrition ingredient list is verified. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": null,
+      "nutrition": {
+        "calories": 5,
+        "sugarGrams": 0,
+        "caffeineMg": 30,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-pump"
+      }
+    },
+    {
+      "id": "strawberry-fruit-inclusions",
+      "name": "Strawberry Fruit Inclusions",
+      "type": "other",
+      "selectionMode": "count",
+      "unit": "scoop",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "FREEZE DRIED STRAWBERRIES — verified dairy-free on starbucks.com/menu/product/2121342/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 10,
+        "sugarGrams": 2,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-scoop"
+      }
+    },
+    {
+      "id": "dragonfruit-fruit-inclusions",
+      "name": "Dragonfruit Fruit Inclusions",
+      "type": "other",
+      "selectionMode": "count",
+      "unit": "scoop",
+      "pricingModel": "flat",
+      "upchargeAmount": 0.5,
+      "defaultCountBySize": null,
+      "maxCount": null,
+      "isSugarFree": null,
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "FREEZE DRIED DRAGONFRUIT PIECES — verified dairy-free on starbucks.com/menu/product/2122725/iced/nutrition. Pricing and isSugarFree remain null. Estimated US average upcharge & per-unit nutrition (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 10,
+        "sugarGrams": 2,
+        "caffeineMg": 0,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "per-scoop"
+      }
+    }
+  ],
+  "bases": [
+    {
+      "id": "pike-place-roast",
+      "name": "Medium Roast - Pike Place® Roast",
+      "categoryId": "hot-coffee",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot"
+      ],
+      "basePriceBySize": {
+        "short": 3.65,
+        "tall": 3.99,
+        "grande": 4.2,
+        "venti": 4.5
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "hot": {
+            "short": 0,
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Verified brewed coffee (0 espresso shots by design, no default milk) on starbucks.com/menu/product/480/hot (2026-11-20). Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 5,
+        "sugarGrams": 0,
+        "caffeineMg": 315,
+        "fatGrams": 0,
+        "proteinGrams": 1,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "caffe-latte",
+      "name": "Caffè Latte",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.25,
+        "tall": 5.72,
+        "grande": 6.48,
+        "venti": 7.02
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot/iced (2 shots) verified live 2026-11-20; non-Grande shot counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 190,
+        "sugarGrams": 18,
+        "caffeineMg": 150,
+        "fatGrams": 7,
+        "proteinGrams": 13,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "caffe-americano",
+      "name": "Caffè Americano",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 4.65,
+        "tall": 5.0,
+        "grande": 5.39,
+        "venti": 5.72
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 3,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 3,
+            "venti": null
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot/iced (3 shots, no milk) verified live 2026-11-20; non-Grande shot counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 15,
+        "sugarGrams": 0,
+        "caffeineMg": 225,
+        "fatGrams": 0,
+        "proteinGrams": 1,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "caffe-mocha",
+      "name": "Caffè Mocha",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.95,
+        "tall": 6.49,
+        "grande": 7.35,
+        "venti": 7.59
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "mocha-sauce",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot/iced (2 shots, 4 Mocha Sauce, regular Whipped Cream) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 370,
+        "sugarGrams": 35,
+        "caffeineMg": 175,
+        "fatGrams": 15,
+        "proteinGrams": 14,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "white-chocolate-mocha",
+      "name": "White Chocolate Mocha",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 6.25,
+        "tall": 6.75,
+        "grande": 7.45,
+        "venti": 7.95
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "white-chocolate-mocha-sauce",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot/iced (2 shots, 4 White Chocolate Mocha Sauce, regular Whipped Cream) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 390,
+        "sugarGrams": null,
+        "caffeineMg": 150,
+        "fatGrams": null,
+        "proteinGrams": null,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "caramel-macchiato",
+      "name": "Caramel Macchiato",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.95,
+        "tall": 6.49,
+        "grande": 7.09,
+        "venti": 7.57
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "vanilla-syrup",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "caramel-drizzle",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot/iced (2 shots, 3 Vanilla Syrup, regular Caramel Drizzle) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 250,
+        "sugarGrams": 33,
+        "caffeineMg": 150,
+        "fatGrams": 7,
+        "proteinGrams": 10,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot"
+      ],
+      "basePriceBySize": {
+        "short": 5.25,
+        "tall": 5.72,
+        "grande": 6.48,
+        "venti": 7.09
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot (2 shots) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": 12,
+        "caffeineMg": 150,
+        "fatGrams": 5,
+        "proteinGrams": null,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "flat-white",
+      "name": "Flat White",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.75,
+        "tall": 6.15,
+        "grande": 6.65,
+        "venti": 6.95
+      },
+      "defaultRecipe": {
+        "milkId": "whole-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot/iced (2 ristretto shots, Whole Milk) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 220,
+        "sugarGrams": null,
+        "caffeineMg": 195,
+        "fatGrams": null,
+        "proteinGrams": 13,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "cinnamon-dolce-latte",
+      "name": "Cinnamon Dolce Latte",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.95,
+        "tall": 6.45,
+        "grande": 7.05,
+        "venti": 7.55
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "cinnamon-dolce-syrup",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "cinnamon-dolce-sprinkles",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot (2 shots, 4 Cinnamon Dolce Syrup, regular Whipped Cream + Sprinkles) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 340,
+        "sugarGrams": 40,
+        "caffeineMg": 150,
+        "fatGrams": 14,
+        "proteinGrams": 12,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "iced-shaken-espresso",
+      "name": "Iced Shaken Espresso",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 4.95,
+        "grande": 5.45,
+        "venti": 5.95
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": null,
+            "grande": 3,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "classic-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 2,
+                "venti": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (3 shots, 2 Classic Syrup) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 100,
+        "sugarGrams": 14,
+        "caffeineMg": 225,
+        "fatGrams": 2,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "iced-brown-sugar-oatmilk-shaken-espresso",
+      "name": "Iced Brown Sugar Oatmilk Shaken Espresso",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 6.45,
+        "grande": 7.25,
+        "venti": 7.95
+      },
+      "defaultRecipe": {
+        "milkId": "oatmilk",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": null,
+            "grande": 3,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "brown-sugar-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 2,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "cinnamon-powder",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (3 Blonde shots, 2 Brown Sugar Syrup, Cinnamon Powder, Oatmilk) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 150,
+        "sugarGrams": 15,
+        "caffeineMg": 255,
+        "fatGrams": 4.5,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "iced-hazelnut-oatmilk-shaken-espresso",
+      "name": "Iced Hazelnut Oatmilk Shaken Espresso",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 6.45,
+        "grande": 7.25,
+        "venti": 7.95
+      },
+      "defaultRecipe": {
+        "milkId": "oatmilk",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": null,
+            "grande": 3,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "hazelnut-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 2,
+                "venti": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (3 Blonde shots, 2 Hazelnut Syrup, Oatmilk) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 150,
+        "sugarGrams": 16,
+        "caffeineMg": 255,
+        "fatGrams": 4.5,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "peppermint-mocha",
+      "name": "Peppermint Mocha",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.95,
+        "tall": 6.45,
+        "grande": 7.25,
+        "venti": 7.75
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "peppermint-syrup",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "mocha-sauce",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "chocolate-curls-topping",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "2026 Holiday seasonal (launched 2026-11-05). Grande hot (2 shots, 4 Peppermint, 4 Mocha, Whipped Cream, Chocolate Curls) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 440,
+        "sugarGrams": 54,
+        "caffeineMg": 175,
+        "fatGrams": 16,
+        "proteinGrams": 13,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "caramel-brulee-latte",
+      "name": "Caramel Brulée Latte",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.75,
+        "tall": 6.25,
+        "grande": 6.95,
+        "venti": 7.45
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "caramel-brulee-sauce",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "caramel-brulee-topping",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "2026 Holiday seasonal (launched 2026-11-05). Grande hot (2 shots, 4 Caramel Brulée Sauce, Whipped Cream, Caramel Brulée Topping) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 410,
+        "sugarGrams": 48,
+        "caffeineMg": 150,
+        "fatGrams": 14,
+        "proteinGrams": 12,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "sugar-cookie-latte",
+      "name": "Sugar Cookie Latte",
+      "categoryId": "espresso",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.75,
+        "tall": 6.25,
+        "grande": 6.95,
+        "venti": 7.45
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": null,
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          },
+          "iced": {
+            "tall": null,
+            "grande": 2,
+            "venti": null
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "sugar-cookie-syrup",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "red-and-green-sprinkle-topping",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "2026 Holiday seasonal (launched 2026-11-05). Grande hot (2 shots, 4 Sugar Cookie Syrup, Red & Green Sprinkles, 2% Milk) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 260,
+        "sugarGrams": 37,
+        "caffeineMg": 150,
+        "fatGrams": 6,
+        "proteinGrams": 11,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "starbucks-cold-brew",
+      "name": "Cold Brew",
+      "categoryId": "cold-brew",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 5.17,
+        "grande": 5.72,
+        "venti": 5.99,
+        "trenta": 6.39
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Verified (0 espresso shots by design, no milk, Tall/Grande/Venti/Trenta) on starbucks.com/menu/product/2121255/iced (2026-11-20). Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 5,
+        "sugarGrams": 0,
+        "caffeineMg": 205,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "vanilla-sweet-cream-cold-brew",
+      "name": "Vanilla Sweet Cream Cold Brew",
+      "categoryId": "cold-brew",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 5.75,
+        "grande": 6.25,
+        "venti": 6.75,
+        "trenta": 7.15
+      },
+      "defaultRecipe": {
+        "milkId": "vanilla-sweet-cream",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "vanilla-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 2,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande (0 shots, 2 Vanilla Syrup, Vanilla Sweet Cream splash) verified live 2026-11-20; non-Grande syrup counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 110,
+        "sugarGrams": 14,
+        "caffeineMg": 185,
+        "fatGrams": 5,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "salted-caramel-cream-cold-brew",
+      "name": "Salted Caramel Cream Cold Brew",
+      "categoryId": "cold-brew",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 6.25,
+        "grande": 6.75,
+        "venti": 7.25,
+        "trenta": 7.65
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "vanilla-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 2,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          },
+          {
+            "modifierId": "salted-caramel-cream-cold-foam",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande (0 shots, 2 Vanilla Syrup, Salted Caramel Cream Cold Foam) verified live 2026-11-20; non-Grande syrup counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 240,
+        "sugarGrams": 26,
+        "caffeineMg": 185,
+        "fatGrams": 14,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "tiramisu-velvet-cold-brew",
+      "name": "Tiramisu Velvet Cold Brew",
+      "categoryId": "cold-brew",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 6.25,
+        "grande": 6.75,
+        "venti": 7.25,
+        "trenta": 7.65
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "vanilla-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 2,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          },
+          {
+            "modifierId": "velvet-mascarpone-cold-foam",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "mocha-drizzle",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "cocoa-cookie-dusting",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "2026 Holiday seasonal (launched 2026-11-05). Grande (0 shots, 2 Vanilla Syrup, Velvet Mascarpone Cold Foam, Mocha Drizzle, Cocoa Cookie Dusting) verified live 2026-11-20; non-Grande syrup counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 330,
+        "sugarGrams": 37,
+        "caffeineMg": 185,
+        "fatGrams": 16,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "iced-coffee-base",
+      "name": "Iced Coffee",
+      "categoryId": "iced-coffee",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 4.63,
+        "grande": 4.95,
+        "venti": 5.17,
+        "trenta": 5.57
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": []
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Verified unsweetened brewed iced coffee (0 espresso shots by design, no default milk) on starbucks.com/menu/product/2123863/iced (2026-11-20). Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 5,
+        "sugarGrams": 0,
+        "caffeineMg": 185,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "chai-latte",
+      "name": "Chai Latte",
+      "categoryId": "tea",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 4.95,
+        "tall": 5.45,
+        "grande": 6.45,
+        "venti": 6.95
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": 0,
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          },
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "chai-concentrate",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "classic-syrup",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot (0 shots, 4 Chai pumps, 4 Classic Syrup, 2% Milk) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 200,
+        "sugarGrams": 31,
+        "caffeineMg": 55,
+        "fatGrams": 4.5,
+        "proteinGrams": null,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "matcha-latte",
+      "name": "Matcha Latte",
+      "categoryId": "tea",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot",
+        "iced"
+      ],
+      "basePriceBySize": {
+        "short": 5.45,
+        "tall": 5.95,
+        "grande": 6.95,
+        "venti": 7.45
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": 0,
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          },
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "matcha-powder",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "classic-syrup",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              },
+              "iced": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot (0 shots, 3 Matcha scoops, 3 Classic Syrup, 2% Milk) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 220,
+        "sugarGrams": 29,
+        "caffeineMg": 65,
+        "fatGrams": 6,
+        "proteinGrams": 11,
+        "basis": "grande-hot"
+      }
+    },
+    {
+      "id": "iced-caramel-brulee-cream-chai",
+      "name": "Iced Caramel Brulée Cream Chai",
+      "categoryId": "tea",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 5.95,
+        "grande": 6.75,
+        "venti": 7.25
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "chai-concentrate",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "classic-syrup",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "caramel-brulee-cream-cold-foam",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "caramel-brulee-topping",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": true,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "2026 Holiday seasonal (launched 2026-11-05). Grande iced (0 shots, 4 Chai, 4 Classic Syrup, Caramel Brulée Cream Cold Foam, Caramel Brulée Topping) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": null,
+        "sugarGrams": null,
+        "caffeineMg": 60,
+        "fatGrams": null,
+        "proteinGrams": null,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "strawberry-acai-refresher",
+      "name": "Strawberry Açaí Refresher",
+      "categoryId": "refresher",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 4.95,
+        "grande": 5.45,
+        "venti": 5.95,
+        "trenta": 6.45
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "strawberry-fruit-inclusions",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 1,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (0 shots, 1 scoop Strawberry Fruit Inclusions, Tall/Grande/Venti/Trenta) verified live 2026-11-20; non-Grande scoop counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 90,
+        "sugarGrams": 21,
+        "caffeineMg": 50,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "pink-drink",
+      "name": "Pink Drink",
+      "categoryId": "refresher",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 6.26,
+        "grande": 6.48,
+        "venti": 6.8,
+        "trenta": 7.3
+      },
+      "defaultRecipe": {
+        "milkId": "coconutmilk",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "strawberry-fruit-inclusions",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 1,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (0 shots, Coconutmilk, 1 scoop Strawberry Fruit Inclusions) verified live 2026-11-20; non-Grande scoop counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": null,
+        "caffeineMg": 50,
+        "fatGrams": null,
+        "proteinGrams": 0,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "mango-dragonfruit-refresher",
+      "name": "Mango Dragonfruit Refresher",
+      "categoryId": "refresher",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 4.95,
+        "grande": 5.45,
+        "venti": 5.95,
+        "trenta": 6.45
+      },
+      "defaultRecipe": {
+        "milkId": null,
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "dragonfruit-fruit-inclusions",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 1,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (0 shots, 1 scoop Dragonfruit Fruit Inclusions) verified live 2026-11-20; non-Grande scoop counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 90,
+        "sugarGrams": 20,
+        "caffeineMg": 50,
+        "fatGrams": 0,
+        "proteinGrams": 0,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "dragon-drink",
+      "name": "Dragon Drink®",
+      "categoryId": "refresher",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti",
+        "trenta"
+      ],
+      "supportedTemperatures": [
+        "iced"
+      ],
+      "basePriceBySize": {
+        "tall": 6.26,
+        "grande": 6.48,
+        "venti": 6.8,
+        "trenta": 7.3
+      },
+      "defaultRecipe": {
+        "milkId": "coconutmilk",
+        "shotsByTemperature": {
+          "iced": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0,
+            "trenta": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "dragonfruit-fruit-inclusions",
+            "countByTemperatureAndSize": {
+              "iced": {
+                "tall": null,
+                "grande": 1,
+                "venti": null,
+                "trenta": null
+              }
+            }
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande iced (0 shots, Coconutmilk, 1 scoop Dragonfruit Fruit Inclusions) verified live 2026-11-20; non-Grande scoop counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": true,
+      "nutrition": {
+        "calories": 140,
+        "sugarGrams": 24,
+        "caffeineMg": 50,
+        "fatGrams": 3,
+        "proteinGrams": 0,
+        "basis": "grande-iced"
+      }
+    },
+    {
+      "id": "caramel-frappuccino",
+      "name": "Caramel Frappuccino® Blended Beverage",
+      "categoryId": "blended",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "blended"
+      ],
+      "basePriceBySize": {
+        "tall": 6.65,
+        "grande": 7.35,
+        "venti": 8.05
+      },
+      "defaultRecipe": {
+        "milkId": "whole-milk",
+        "shotsByTemperature": {
+          "blended": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "caramel-syrup",
+            "countByTemperatureAndSize": {
+              "blended": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "frappuccino-roast",
+            "countByTemperatureAndSize": {
+              "blended": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "caramel-drizzle",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande blended (0 espresso shots, Whole Milk, 3 Caramel Syrup, 3 Frappuccino Roast, Whipped Cream, Caramel Drizzle; volumes 12/16/24 oz) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 380,
+        "sugarGrams": 54,
+        "caffeineMg": 90,
+        "fatGrams": 16,
+        "proteinGrams": null,
+        "basis": "grande-blended"
+      }
+    },
+    {
+      "id": "mocha-frappuccino",
+      "name": "Mocha Frappuccino® Blended Beverage",
+      "categoryId": "blended",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "blended"
+      ],
+      "basePriceBySize": {
+        "tall": 6.65,
+        "grande": 7.35,
+        "venti": 8.05
+      },
+      "defaultRecipe": {
+        "milkId": "whole-milk",
+        "shotsByTemperature": {
+          "blended": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "mocha-sauce",
+            "countByTemperatureAndSize": {
+              "blended": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "frappuccino-roast",
+            "countByTemperatureAndSize": {
+              "blended": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande blended (0 espresso shots, Whole Milk, 3 Mocha Sauce, 3 Frappuccino Roast, Whipped Cream) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 370,
+        "sugarGrams": 51,
+        "caffeineMg": 100,
+        "fatGrams": 15,
+        "proteinGrams": 5,
+        "basis": "grande-blended"
+      }
+    },
+    {
+      "id": "vanilla-bean-creme-frappuccino",
+      "name": "Vanilla Bean Crème Frappuccino® Blended Beverage",
+      "categoryId": "blended",
+      "availableSizes": [
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "blended"
+      ],
+      "basePriceBySize": {
+        "tall": 6.15,
+        "grande": 6.85,
+        "venti": 7.55
+      },
+      "defaultRecipe": {
+        "milkId": "whole-milk",
+        "shotsByTemperature": {
+          "blended": {
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "vanilla-bean-powder",
+            "countByTemperatureAndSize": {
+              "blended": {
+                "tall": null,
+                "grande": 3,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande blended (0 espresso shots, Whole Milk, 3 Vanilla Bean Powder scoops, Whipped Cream) verified live 2026-11-20; Tall/Venti counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 380,
+        "sugarGrams": 52,
+        "caffeineMg": 0,
+        "fatGrams": 16,
+        "proteinGrams": 5,
+        "basis": "grande-blended"
+      }
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "Hot Chocolate",
+      "categoryId": "other",
+      "availableSizes": [
+        "short",
+        "tall",
+        "grande",
+        "venti"
+      ],
+      "supportedTemperatures": [
+        "hot"
+      ],
+      "basePriceBySize": {
+        "short": 4.75,
+        "tall": 5.25,
+        "grande": 5.93,
+        "venti": 6.45
+      },
+      "defaultRecipe": {
+        "milkId": "2-percent-milk",
+        "shotsByTemperature": {
+          "hot": {
+            "short": 0,
+            "tall": 0,
+            "grande": 0,
+            "venti": 0
+          }
+        },
+        "modifiers": [
+          {
+            "modifierId": "mocha-sauce",
+            "countByTemperatureAndSize": {
+              "hot": {
+                "short": null,
+                "tall": null,
+                "grande": 4,
+                "venti": null
+              }
+            }
+          },
+          {
+            "modifierId": "whipped-cream",
+            "defaultLevel": "regular"
+          },
+          {
+            "modifierId": "mocha-drizzle",
+            "defaultLevel": "regular"
+          }
+        ]
+      },
+      "isSeasonal": false,
+      "iconKey": null,
+      "colorHex": null,
+      "verified": false,
+      "verificationNote": "Grande hot (0 shots, 2% Milk, 4 Mocha Sauce, Whipped Cream, Mocha Drizzle; page also lists Kids 8 fl oz) verified live 2026-11-20; non-Grande counts left null. Estimated US average basePriceBySize (Nov 2026) — varies by store.",
+      "isDairyFree": false,
+      "nutrition": {
+        "calories": 370,
+        "sugarGrams": 37,
+        "caffeineMg": 25,
+        "fatGrams": 16,
+        "proteinGrams": 14,
+        "basis": "grande-hot"
+      }
+    }
+  ],
+  "rules": [],
+  "seasonal": [
+    {
+      "itemId": "peppermint-mocha",
+      "itemKind": "base",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "caramel-brulee-latte",
+      "itemKind": "base",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "sugar-cookie-latte",
+      "itemKind": "base",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "tiramisu-velvet-cold-brew",
+      "itemKind": "base",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "iced-caramel-brulee-cream-chai",
+      "itemKind": "base",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "peppermint-syrup",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "sugar-cookie-syrup",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "caramel-brulee-sauce",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "velvet-mascarpone-cold-foam",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "caramel-brulee-cream-cold-foam",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "gingerbread-cream-cold-foam",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "peppermint-chocolate-cream-cold-foam",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "sugar-cookie-cream-cold-foam",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "chocolate-curls-topping",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "caramel-brulee-topping",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "red-and-green-sprinkle-topping",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    },
+    {
+      "itemId": "cocoa-cookie-dusting",
+      "itemKind": "modifier",
+      "startDate": "2026-11-05",
+      "endDate": null,
+      "status": "active"
+    }
+  ]
+}

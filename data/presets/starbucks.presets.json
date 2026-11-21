@@ -1,0 +1,513 @@
+{
+  "meta": {
+    "chainId": "starbucks",
+    "version": "1.0.0",
+    "lastUpdated": "2026-11-20",
+    "note": "Curated Crowd Favorites, Classic Combos, and fan-favorite Secret Menu recipes built strictly from verified starbucks.json IDs. Secret Menu names are unofficial fan names — use the Barista Order Card to order by ingredients."
+  },
+  "presets": [
+    {
+      "id": "viral-iced-white-mocha",
+      "name": "Iced White Mocha + Caramel Foam",
+      "category": "crowd-favorite",
+      "tagline": "The viral classic: white mocha over ice with salted caramel foam and extra caramel drizzle, no whip.",
+      "drinkState": {
+        "id": "preset-viral-iced-white-mocha",
+        "name": "Iced White Mocha + Caramel Foam",
+        "chainId": "starbucks",
+        "baseId": "white-chocolate-mocha",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "2-percent-milk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "white-chocolate-mocha-sauce",
+            "count": 4,
+            "level": null
+          },
+          {
+            "modifierId": "salted-caramel-cream-cold-foam",
+            "count": null,
+            "level": "regular"
+          },
+          {
+            "modifierId": "caramel-drizzle",
+            "count": null,
+            "level": "extra"
+          }
+        ],
+        "options": null,
+        "notes": "No whipped cream",
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "brown-sugar-oat-shaken-plus",
+      "name": "Extra-Cinnamon Brown Sugar Shaken",
+      "category": "crowd-favorite",
+      "tagline": "Dairy-free favorite with bold espresso, brown sugar, oatmilk, and extra cinnamon.",
+      "drinkState": {
+        "id": "preset-brown-sugar-oat-shaken-plus",
+        "name": "Extra-Cinnamon Brown Sugar Shaken",
+        "chainId": "starbucks",
+        "baseId": "iced-brown-sugar-oatmilk-shaken-espresso",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "oatmilk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 3,
+            "level": null
+          },
+          {
+            "modifierId": "brown-sugar-syrup",
+            "count": 4,
+            "level": null
+          },
+          {
+            "modifierId": "cinnamon-powder",
+            "count": null,
+            "level": "extra"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "dirty-oat-chai",
+      "name": "Double Dirty Oatmilk Chai",
+      "category": "crowd-favorite",
+      "tagline": "Spiced chai latte upgraded with two shots of espresso, creamy oatmilk, and cinnamon.",
+      "drinkState": {
+        "id": "preset-dirty-oat-chai",
+        "name": "Double Dirty Oatmilk Chai",
+        "chainId": "starbucks",
+        "baseId": "chai-latte",
+        "sizeId": "grande",
+        "temperature": "hot",
+        "milkId": "oatmilk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "chai-concentrate",
+            "count": 4,
+            "level": null
+          },
+          {
+            "modifierId": "cinnamon-powder",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "extra-caramel-iced-macchiato",
+      "name": "Extra-Caramel Iced Macchiato",
+      "category": "crowd-favorite",
+      "tagline": "Layered vanilla milk and espresso finished with extra caramel drizzle.",
+      "drinkState": {
+        "id": "preset-extra-caramel-iced-macchiato",
+        "name": "Extra-Caramel Iced Macchiato",
+        "chainId": "starbucks",
+        "baseId": "caramel-macchiato",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "2-percent-milk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "vanilla-syrup",
+            "count": 3,
+            "level": null
+          },
+          {
+            "modifierId": "caramel-drizzle",
+            "count": null,
+            "level": "extra"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "morning-powerhouse-americano",
+      "name": "Quad Brown Sugar Oat Americano",
+      "category": "classic-combo",
+      "tagline": "High-caffeine, lower-sugar dairy-free pick with 4 shots and a hint of brown sugar.",
+      "drinkState": {
+        "id": "preset-morning-powerhouse-americano",
+        "name": "Quad Brown Sugar Oat Americano",
+        "chainId": "starbucks",
+        "baseId": "caffe-americano",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "oatmilk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 4,
+            "level": null
+          },
+          {
+            "modifierId": "brown-sugar-syrup",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "cinnamon-powder",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": "Splash of oatmilk",
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "cinnamon-roll-latte",
+      "name": "Cinnamon Roll Latte",
+      "category": "classic-combo",
+      "tagline": "Warm cinnamon dolce meets white mocha icing and whipped cream.",
+      "drinkState": {
+        "id": "preset-cinnamon-roll-latte",
+        "name": "Cinnamon Roll Latte",
+        "chainId": "starbucks",
+        "baseId": "cinnamon-dolce-latte",
+        "sizeId": "grande",
+        "temperature": "hot",
+        "milkId": "2-percent-milk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "cinnamon-dolce-syrup",
+            "count": 3,
+            "level": null
+          },
+          {
+            "modifierId": "white-chocolate-mocha-sauce",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "whipped-cream",
+            "count": null,
+            "level": "regular"
+          },
+          {
+            "modifierId": "cinnamon-dolce-sprinkles",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "salted-vanilla-cold-brew",
+      "name": "Salted Vanilla Cold Brew",
+      "category": "classic-combo",
+      "tagline": "Smooth cold brew sweetened with vanilla and crowned with salted caramel cold foam.",
+      "drinkState": {
+        "id": "preset-salted-vanilla-cold-brew",
+        "name": "Salted Vanilla Cold Brew",
+        "chainId": "starbucks",
+        "baseId": "vanilla-sweet-cream-cold-brew",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "vanilla-sweet-cream",
+        "modifiers": [
+          {
+            "modifierId": "vanilla-syrup",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "salted-caramel-cream-cold-foam",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "peppermint-tuxedo-mocha",
+      "name": "Holiday Peppermint Tuxedo Mocha",
+      "category": "classic-combo",
+      "tagline": "Half dark mocha, half white mocha, peppermint syrup, whip, and chocolate curls.",
+      "drinkState": {
+        "id": "preset-peppermint-tuxedo-mocha",
+        "name": "Holiday Peppermint Tuxedo Mocha",
+        "chainId": "starbucks",
+        "baseId": "peppermint-mocha",
+        "sizeId": "grande",
+        "temperature": "hot",
+        "milkId": "2-percent-milk",
+        "modifiers": [
+          {
+            "modifierId": "espresso-shot",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "mocha-sauce",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "white-chocolate-mocha-sauce",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "peppermint-syrup",
+            "count": 3,
+            "level": null
+          },
+          {
+            "modifierId": "whipped-cream",
+            "count": null,
+            "level": "regular"
+          },
+          {
+            "modifierId": "chocolate-curls-topping",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Curated custom build using verified starbucks.json item IDs; not an official menu SKU."
+    },
+    {
+      "id": "snickerdoodle-hot-chocolate",
+      "name": "Snickerdoodle Hot Chocolate",
+      "category": "secret-menu",
+      "tagline": "Secret menu cozy treat: white mocha + cinnamon dolce in steamed milk, no dark mocha.",
+      "drinkState": {
+        "id": "preset-snickerdoodle-hot-chocolate",
+        "name": "Snickerdoodle Hot Chocolate",
+        "chainId": "starbucks",
+        "baseId": "hot-chocolate",
+        "sizeId": "grande",
+        "temperature": "hot",
+        "milkId": "2-percent-milk",
+        "modifiers": [
+          {
+            "modifierId": "white-chocolate-mocha-sauce",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "cinnamon-dolce-syrup",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "whipped-cream",
+            "count": null,
+            "level": "regular"
+          },
+          {
+            "modifierId": "cinnamon-dolce-sprinkles",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": "No mocha sauce — sub white mocha + cinnamon dolce",
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Unofficial fan-favorite secret menu recipe; order by ingredients using the Order Card. All referenced item IDs are verified in starbucks.json."
+    },
+    {
+      "id": "ferrero-rocher-frappuccino",
+      "name": "Ferrero Rocher Frappuccino",
+      "category": "secret-menu",
+      "tagline": "Secret menu hazelnut-chocolate blended treat with mocha and caramel drizzle.",
+      "drinkState": {
+        "id": "preset-ferrero-rocher-frappuccino",
+        "name": "Ferrero Rocher Frappuccino",
+        "chainId": "starbucks",
+        "baseId": "mocha-frappuccino",
+        "sizeId": "grande",
+        "temperature": "blended",
+        "milkId": "whole-milk",
+        "modifiers": [
+          {
+            "modifierId": "frappuccino-roast",
+            "count": 3,
+            "level": null
+          },
+          {
+            "modifierId": "mocha-sauce",
+            "count": 3,
+            "level": null
+          },
+          {
+            "modifierId": "hazelnut-syrup",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "whipped-cream",
+            "count": null,
+            "level": "regular"
+          },
+          {
+            "modifierId": "mocha-drizzle",
+            "count": null,
+            "level": "regular"
+          },
+          {
+            "modifierId": "caramel-drizzle",
+            "count": null,
+            "level": "regular"
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Unofficial fan-favorite secret menu recipe; order by ingredients using the Order Card. All referenced item IDs are verified in starbucks.json."
+    },
+    {
+      "id": "strawberries-and-cream-pink-drink",
+      "name": "Strawberries & Cream Pink Drink",
+      "category": "secret-menu",
+      "tagline": "Dairy-free secret menu upgrade: Pink Drink shaken with vanilla bean powder and extra strawberries.",
+      "drinkState": {
+        "id": "preset-strawberries-and-cream-pink-drink",
+        "name": "Strawberries & Cream Pink Drink",
+        "chainId": "starbucks",
+        "baseId": "pink-drink",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "coconutmilk",
+        "modifiers": [
+          {
+            "modifierId": "strawberry-fruit-inclusions",
+            "count": 2,
+            "level": null
+          },
+          {
+            "modifierId": "vanilla-bean-powder",
+            "count": 2,
+            "level": null
+          }
+        ],
+        "options": null,
+        "notes": null,
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Unofficial fan-favorite secret menu recipe; order by ingredients using the Order Card. All referenced item IDs are verified in starbucks.json."
+    },
+    {
+      "id": "cosmo-and-wanda-matcha-pink",
+      "name": "Matcha Pink Drink (Layered)",
+      "category": "secret-menu",
+      "tagline": "Famous pink-and-green secret menu combo: Pink Drink topped with shaken matcha.",
+      "drinkState": {
+        "id": "preset-cosmo-and-wanda-matcha-pink",
+        "name": "Matcha Pink Drink (Layered)",
+        "chainId": "starbucks",
+        "baseId": "pink-drink",
+        "sizeId": "grande",
+        "temperature": "iced",
+        "milkId": "coconutmilk",
+        "modifiers": [
+          {
+            "modifierId": "strawberry-fruit-inclusions",
+            "count": 1,
+            "level": null
+          },
+          {
+            "modifierId": "matcha-powder",
+            "count": 2,
+            "level": null
+          }
+        ],
+        "options": null,
+        "notes": "Ask for matcha floated on top or mixed in",
+        "createdAt": "2026-11-21T06:45:00Z",
+        "updatedAt": "2026-11-21T06:45:00Z",
+        "schemaVersion": "1.0.0"
+      },
+      "verified": false,
+      "verificationNote": "Unofficial fan-favorite secret menu recipe; order by ingredients using the Order Card. All referenced item IDs are verified in starbucks.json."
+    }
+  ]
+}

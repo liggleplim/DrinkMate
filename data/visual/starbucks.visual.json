@@ -1,0 +1,347 @@
+{
+  "schemaVersion": "1.0.0",
+  "chainId": "starbucks",
+  "bases": {
+    "pike-place-roast": {
+      "iconKey": null,
+      "colorHex": "#5b3a24"
+    },
+    "caffe-latte": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "caffe-americano": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "caffe-mocha": {
+      "iconKey": null,
+      "colorHex": "#5a3322"
+    },
+    "white-chocolate-mocha": {
+      "iconKey": null,
+      "colorHex": "#8a5c3e"
+    },
+    "caramel-macchiato": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "cappuccino": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "flat-white": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "cinnamon-dolce-latte": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "iced-shaken-espresso": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "iced-brown-sugar-oatmilk-shaken-espresso": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "iced-hazelnut-oatmilk-shaken-espresso": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "peppermint-mocha": {
+      "iconKey": null,
+      "colorHex": "#5a3322"
+    },
+    "caramel-brulee-latte": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "sugar-cookie-latte": {
+      "iconKey": null,
+      "colorHex": "#6b4129"
+    },
+    "starbucks-cold-brew": {
+      "iconKey": null,
+      "colorHex": "#4a2c1b"
+    },
+    "vanilla-sweet-cream-cold-brew": {
+      "iconKey": null,
+      "colorHex": "#4a2c1b"
+    },
+    "salted-caramel-cream-cold-brew": {
+      "iconKey": null,
+      "colorHex": "#4a2c1b"
+    },
+    "tiramisu-velvet-cold-brew": {
+      "iconKey": null,
+      "colorHex": "#4a2c1b"
+    },
+    "iced-coffee-base": {
+      "iconKey": null,
+      "colorHex": "#6a4228"
+    },
+    "chai-latte": {
+      "iconKey": null,
+      "colorHex": "#b9824f"
+    },
+    "matcha-latte": {
+      "iconKey": null,
+      "colorHex": "#8fa862"
+    },
+    "iced-caramel-brulee-cream-chai": {
+      "iconKey": null,
+      "colorHex": "#b9824f"
+    },
+    "strawberry-acai-refresher": {
+      "iconKey": null,
+      "colorHex": "#e8566a"
+    },
+    "pink-drink": {
+      "iconKey": null,
+      "colorHex": "#f08aa5"
+    },
+    "mango-dragonfruit-refresher": {
+      "iconKey": null,
+      "colorHex": "#f5a742"
+    },
+    "dragon-drink": {
+      "iconKey": null,
+      "colorHex": "#e45f9a"
+    },
+    "caramel-frappuccino": {
+      "iconKey": null,
+      "colorHex": "#c8935a"
+    },
+    "mocha-frappuccino": {
+      "iconKey": null,
+      "colorHex": "#7a4b36"
+    },
+    "vanilla-bean-creme-frappuccino": {
+      "iconKey": null,
+      "colorHex": "#f1e2c2"
+    },
+    "hot-chocolate": {
+      "iconKey": null,
+      "colorHex": "#6a3d2a"
+    }
+  },
+  "milks": {
+    "2-percent-milk": {
+      "iconKey": null,
+      "colorHex": "#f5ebdb"
+    },
+    "almondmilk": {
+      "iconKey": null,
+      "colorHex": "#efe0c8"
+    },
+    "coconutmilk": {
+      "iconKey": null,
+      "colorHex": "#f3ece0"
+    },
+    "breve-half-and-half": {
+      "iconKey": null,
+      "colorHex": "#f7ecd4"
+    },
+    "heavy-cream": {
+      "iconKey": null,
+      "colorHex": "#f8efd8"
+    },
+    "nonfat-milk": {
+      "iconKey": null,
+      "colorHex": "#f2eadf"
+    },
+    "oatmilk": {
+      "iconKey": null,
+      "colorHex": "#ecd9b8"
+    },
+    "protein-boosted-milk": {
+      "iconKey": null,
+      "colorHex": "#f1e6d0"
+    },
+    "soymilk": {
+      "iconKey": null,
+      "colorHex": "#efe3c4"
+    },
+    "nondairy-vanilla-sweet-cream": {
+      "iconKey": null,
+      "colorHex": "#f3e4bd"
+    },
+    "vanilla-sweet-cream": {
+      "iconKey": null,
+      "colorHex": "#f8e9c0"
+    },
+    "whole-milk": {
+      "iconKey": null,
+      "colorHex": "#f6ecd9"
+    }
+  },
+  "modifiers": {
+    "espresso-shot": {
+      "iconKey": null,
+      "colorHex": "#2e1a10",
+      "cupLayer": "mix"
+    },
+    "vanilla-syrup": {
+      "iconKey": null,
+      "colorHex": "#f0d9a0",
+      "cupLayer": "mix"
+    },
+    "classic-syrup": {
+      "iconKey": null,
+      "colorHex": "#f2e6c4",
+      "cupLayer": "mix"
+    },
+    "brown-sugar-syrup": {
+      "iconKey": null,
+      "colorHex": "#a9683a",
+      "cupLayer": "mix"
+    },
+    "caramel-syrup": {
+      "iconKey": null,
+      "colorHex": "#c98a3c",
+      "cupLayer": "mix"
+    },
+    "cinnamon-dolce-syrup": {
+      "iconKey": null,
+      "colorHex": "#b8693a",
+      "cupLayer": "mix"
+    },
+    "hazelnut-syrup": {
+      "iconKey": null,
+      "colorHex": "#a8723f",
+      "cupLayer": "mix"
+    },
+    "peppermint-syrup": {
+      "iconKey": null,
+      "colorHex": "#cfe8d6",
+      "cupLayer": "mix"
+    },
+    "sugar-cookie-syrup": {
+      "iconKey": null,
+      "colorHex": "#f0d3a0",
+      "cupLayer": "mix"
+    },
+    "mocha-sauce": {
+      "iconKey": null,
+      "colorHex": "#4a2618",
+      "cupLayer": "mix"
+    },
+    "white-chocolate-mocha-sauce": {
+      "iconKey": null,
+      "colorHex": "#f1e3c2",
+      "cupLayer": "mix"
+    },
+    "caramel-brulee-sauce": {
+      "iconKey": null,
+      "colorHex": "#c07a30",
+      "cupLayer": "mix"
+    },
+    "salted-caramel-cream-cold-foam": {
+      "iconKey": null,
+      "colorHex": "#e8c99a",
+      "cupLayer": "foam"
+    },
+    "velvet-mascarpone-cold-foam": {
+      "iconKey": null,
+      "colorHex": "#f6ecdc",
+      "cupLayer": "foam"
+    },
+    "caramel-brulee-cream-cold-foam": {
+      "iconKey": null,
+      "colorHex": "#e6bd85",
+      "cupLayer": "foam"
+    },
+    "gingerbread-cream-cold-foam": {
+      "iconKey": null,
+      "colorHex": "#d9a56e",
+      "cupLayer": "foam"
+    },
+    "peppermint-chocolate-cream-cold-foam": {
+      "iconKey": null,
+      "colorHex": "#f0d9d4",
+      "cupLayer": "foam"
+    },
+    "sugar-cookie-cream-cold-foam": {
+      "iconKey": null,
+      "colorHex": "#f4e2c0",
+      "cupLayer": "foam"
+    },
+    "caramel-drizzle": {
+      "iconKey": null,
+      "colorHex": "#c47a22",
+      "cupLayer": "drizzle"
+    },
+    "mocha-drizzle": {
+      "iconKey": null,
+      "colorHex": "#4a2618",
+      "cupLayer": "drizzle"
+    },
+    "whipped-cream": {
+      "iconKey": null,
+      "colorHex": "#fffaf0",
+      "cupLayer": "top"
+    },
+    "cinnamon-powder": {
+      "iconKey": null,
+      "colorHex": "#a85a2a",
+      "cupLayer": "top"
+    },
+    "cinnamon-dolce-sprinkles": {
+      "iconKey": null,
+      "colorHex": "#c98a50",
+      "cupLayer": "top"
+    },
+    "chocolate-curls-topping": {
+      "iconKey": null,
+      "colorHex": "#3b2216",
+      "cupLayer": "top"
+    },
+    "caramel-brulee-topping": {
+      "iconKey": null,
+      "colorHex": "#d29a40",
+      "cupLayer": "top"
+    },
+    "red-and-green-sprinkle-topping": {
+      "iconKey": null,
+      "colorHex": "#c0463a",
+      "cupLayer": "top"
+    },
+    "cocoa-cookie-dusting": {
+      "iconKey": null,
+      "colorHex": "#5a3a28",
+      "cupLayer": "top"
+    },
+    "chai-concentrate": {
+      "iconKey": null,
+      "colorHex": "#a8683a",
+      "cupLayer": "mix"
+    },
+    "matcha-powder": {
+      "iconKey": null,
+      "colorHex": "#7f9a4a",
+      "cupLayer": "mix"
+    },
+    "vanilla-bean-powder": {
+      "iconKey": null,
+      "colorHex": "#f1e2b8",
+      "cupLayer": "mix"
+    },
+    "frappuccino-roast": {
+      "iconKey": null,
+      "colorHex": "#4a2c1b",
+      "cupLayer": "mix"
+    },
+    "strawberry-fruit-inclusions": {
+      "iconKey": null,
+      "colorHex": "#d9455f",
+      "cupLayer": "mix"
+    },
+    "dragonfruit-fruit-inclusions": {
+      "iconKey": null,
+      "colorHex": "#d93d84",
+      "cupLayer": "mix"
+    }
+  }
+}

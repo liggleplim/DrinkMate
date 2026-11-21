@@ -1,0 +1,95 @@
+/* DrinkMate cup visuals. Owned by Claude. */
+.cup-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 12px 12px;
+  margin-bottom: 14px;
+  border-radius: 22px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--cream-hi) 0%, var(--stage-bg) 70%);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 18px rgba(74, 47, 31, 0.08);
+}
+#cup-root { width: 100%; max-width: 230px; }
+.cup-svg { display: block; width: 100%; height: auto; max-height: 270px; overflow: visible; }
+.cup-caption {
+  margin: 2px 0 0;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  color: var(--coffee);
+  text-align: center;
+  min-height: 2.5em;
+  max-width: 280px;
+}
+
+.cup-shadow { fill: rgba(74, 47, 31, 0.14); }
+.g-cup { transform-box: view-box; transform-origin: 130px 292px; transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.cup-back { fill: rgba(255, 250, 241, 0.65); }
+.cup-glass { fill: rgba(255, 255, 255, 0.10); stroke: var(--coffee); stroke-width: 3.5; stroke-linejoin: round; }
+.cup-shine { stroke: rgba(255, 255, 255, 0.65); stroke-width: 4; stroke-linecap: round; fill: none; }
+.cup-handle { fill: none; stroke: var(--coffee); stroke-width: 9; stroke-linecap: round; }
+.temp-hot .cup-back { fill: #fff6e6; }
+.temp-hot .cup-glass { fill: rgba(255, 246, 230, 0.05); }
+
+.straw { fill: #d98a5c; stroke: var(--coffee); stroke-width: 2; stroke-linejoin: round; }
+.straw-tip { fill: #c1693a; stroke: var(--coffee); stroke-width: 2; stroke-linejoin: round; }
+
+.liq { shape-rendering: geometricPrecision; }
+
+/* Ice */
+.ice { fill: rgba(255, 255, 255, 0.42); stroke: rgba(255, 255, 255, 0.85); stroke-width: 1.6; }
+.ice-glint { stroke: #fff; stroke-width: 2; stroke-linecap: round; fill: none; }
+.ice-cube { animation: ice-drop 0.6s cubic-bezier(0.34, 1.4, 0.64, 1) both; }
+.ice-bob { animation: bob 3.4s ease-in-out infinite; }
+@keyframes ice-drop { from { opacity: 0; transform: translateY(-40px); } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+
+/* Steam */
+.steam-wisp { fill: none; stroke: rgba(120, 85, 60, 0.35); stroke-width: 4; stroke-linecap: round; animation: steam 2.6s ease-in-out infinite; opacity: 0; }
+@keyframes steam {
+  0% { opacity: 0; transform: translateY(8px); }
+  35% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-14px); }
+}
+
+/* Toppings */
+.foam-puff { animation: puff 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; transform-box: fill-box; transform-origin: center bottom; }
+@keyframes puff { from { transform: scale(0.1); opacity: 0; } }
+.whip-pop { animation: whip 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both; transform-box: fill-box; transform-origin: center bottom; }
+@keyframes whip { from { transform: scale(0.2, 0); opacity: 0; } }
+.whip-tier { stroke: rgba(74, 47, 31, 0.18); stroke-width: 1.5; }
+.blend-cloud { stroke: rgba(74, 47, 31, 0.12); stroke-width: 1.2; }
+.drizzle-line { fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 0.8s ease-out forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.sprinkle { animation: sprinkle 0.7s cubic-bezier(0.3, 0.9, 0.5, 1) both; }
+@keyframes sprinkle { from { opacity: 0; transform: translateY(-34px); } }
+
+/* Pour + wiggle */
+.pour-stream { transform-box: fill-box; transform-origin: center top; animation: pour 0.85s ease-in-out forwards; opacity: 0.9; }
+@keyframes pour {
+  0% { transform: scaleY(0); opacity: 0.9; }
+  45% { transform: scaleY(1); opacity: 0.9; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+.g-cup.wiggle { animation: wiggle 0.5s ease-in-out; }
+@keyframes wiggle {
+  0%, 100% { rotate: 0deg; }
+  25% { rotate: -2.5deg; }
+  60% { rotate: 2deg; }
+}
+
+/* Tall phones: pin a compact cup so it stays visible while you edit */
+@media (min-height: 700px) {
+  .cup-stage { position: sticky; top: 104px; z-index: 5; padding: 6px 12px 8px; }
+  #cup-root { max-width: 100px; }
+  .cup-caption { min-height: 0; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ice-cube, .ice-bob, .steam-wisp, .foam-puff, .whip-pop, .sprinkle, .pour-stream, .g-cup.wiggle { animation: none; }
+  .steam-wisp { opacity: 0.6; }
+  .drizzle-line { animation: none; stroke-dashoffset: 0; }
+  .g-cup { transition: none; }
+}

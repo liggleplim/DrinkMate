@@ -1,0 +1,151 @@
+{
+  "chainId": "starbucks",
+  "region": "US",
+  "slice": "espresso-thin-slice",
+  "retrievedDate": "2026-11-20",
+  "methodNotes": {
+    "whatWorked": [
+      "Using site:starbucks.com/menu/product search to locate canonical product IDs, then fetching https://www.starbucks.com/menu/product/{id}/{hot|iced} via static web fetch.",
+      "Every fetched product page rendered the full Size Options (names and exact fl oz volumes), default Grande 'What's Included' recipe (milk, shots, default syrup/sauce pump count, default toppings/drizzles), all 12 milk options, roast options, ice/foam/steamed-temp options, and Grande headline calories/sugar/fat/protein."
+    ],
+    "whatWasHard": [
+      "Static page fetch only renders the default Grande size. Confirming Short, Tall, and Venti default shot and pump counts requires interactive browser clicks on each size button — so all non-Grande counts are left explicit null (verified: false) rather than guessed.",
+      "The full 'Customize' drawer (complete list of add-on syrups, sauces, cold foams, toppings, drizzles, and max pump count) is hidden behind an interactive 'Customize' button and is not exposed in static HTML.",
+      "Prices vary by US store and are not shown until a café is selected, so all basePriceBySize and upchargeAmount values are null.",
+      "Two subtle drink properties appeared on live pages that we should decide how to model before Phase 2: (1) Espresso Roast choice (Blonde, Signature, Decaf, 1/2, 1/3, 2/3 Decaf — e.g., Brown Sugar Oatmilk Shaken Espresso defaults to Blonde Espresso), and (2) Shot Pull style (Ristretto vs Long Shot — Flat White defaults to Ristretto)."
+    ],
+    "proposedFullPullRecipe": "Keep static fetch for rapid catalog discovery (all bases, sizes, oz, milks, and Grande recipes), then run a small targeted interactive browser pass on 1-2 representative bases per category to capture the full Customize drawer (all syrups/sauces/foams/toppings, maxCount) and confirm Short/Tall/Venti/Trenta default shot/pump patterns."
+  },
+  "items": [
+    {
+      "baseId": "caffe-latte",
+      "sources": [
+        "https://www.starbucks.com/menu/product/407/hot",
+        "https://www.starbucks.com/menu/product/407/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "milks": "All 12 standard milks (default: 2% Milk)",
+        "hotOnly": ["Milk Foam (No/Light/Regular/Extra)", "Milk Temp (Warm/Steamed Hot/Extra Hot)"],
+        "icedOnly": ["Ice (No/Light/Regular/Extra)"],
+        "espressoRoasts": ["Blonde Espresso", "Signature Espresso (default)", "1/2 Decaf", "Decaf Espresso Roast", "1/3 Decaf", "2/3 Decaf"]
+      }
+    },
+    {
+      "baseId": "caffe-americano",
+      "sources": [
+        "https://www.starbucks.com/menu/product/406/hot",
+        "https://www.starbucks.com/menu/product/406/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "milks": "None by default (milkId: null); splash options live in Customize drawer",
+        "icedOnly": ["Ice (No/Light/Regular/Extra)"],
+        "espressoRoasts": ["Blonde Espresso", "Signature Espresso (default)", "1/2 Decaf", "Decaf Espresso Roast", "1/3 Decaf", "2/3 Decaf"]
+      }
+    },
+    {
+      "baseId": "caffe-mocha",
+      "sources": [
+        "https://www.starbucks.com/menu/product/408/hot",
+        "https://www.starbucks.com/menu/product/408/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "milks": "All 12 standard milks (default: 2% Milk)",
+        "flavorsDefaultGrande": "4 pumps Mocha Sauce",
+        "toppingsDefault": "Whipped Cream (No/Light/Regular/Extra)",
+        "hotOnly": ["Milk Foam", "Milk Temp"],
+        "icedOnly": ["Ice"],
+        "espressoRoasts": ["Signature Espresso (default) + 5 other roast/decaf options"]
+      }
+    },
+    {
+      "baseId": "white-chocolate-mocha",
+      "sources": [
+        "https://www.starbucks.com/menu/product/420/hot",
+        "https://www.starbucks.com/menu/product/420/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "milks": "All 12 standard milks (default: 2% Milk)",
+        "flavorsDefaultGrande": "4 pumps White Chocolate Mocha Sauce",
+        "toppingsDefault": "Whipped Cream (No/Light/Regular/Extra)",
+        "hotOnly": ["Milk Foam", "Milk Temp"],
+        "icedOnly": ["Ice"],
+        "espressoRoasts": ["Signature Espresso (default) + 5 other roast/decaf options"]
+      }
+    },
+    {
+      "baseId": "caramel-macchiato",
+      "sources": [
+        "https://www.starbucks.com/menu/product/413/hot",
+        "https://www.starbucks.com/menu/product/413/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "milks": "All 12 standard milks (default: 2% Milk)",
+        "flavorsDefaultGrande": "3 pumps Vanilla Syrup",
+        "toppingsDefault": "Caramel Drizzle (No/Light/Regular/Extra)",
+        "hotOnly": ["Milk Foam", "Milk Temp"],
+        "icedOnly": ["Ice"],
+        "espressoRoasts": ["Signature Espresso (default) + 5 other roast/decaf options"]
+      }
+    },
+    {
+      "baseId": "cappuccino",
+      "sources": [
+        "https://www.starbucks.com/menu/product/409/hot"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "temperatures": "Hot only",
+        "milks": "All 12 standard milks (default: 2% Milk)",
+        "hotOnly": ["Milk Foam (No/Light/Regular/Extra)", "Milk Temp (Warm/Steamed Hot/Extra Hot)"],
+        "espressoRoasts": ["Signature Espresso (default) + 5 other roast/decaf options"]
+      }
+    },
+    {
+      "baseId": "flat-white",
+      "sources": [
+        "https://www.starbucks.com/menu/product/565/hot",
+        "https://www.starbucks.com/menu/product/565/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "milks": "All 12 standard milks (default: Whole Milk)",
+        "shotPullOptions": ["Ristretto (default)", "Long Shot"],
+        "hotOnly": ["Milk Temp (Warm/Steamed Hot/Extra Hot)"],
+        "icedOnly": ["Ice (No/Light/Regular/Extra)"],
+        "espressoRoasts": ["Signature Espresso (default) + 5 other roast/decaf options"]
+      }
+    },
+    {
+      "baseId": "iced-shaken-espresso",
+      "sources": [
+        "https://www.starbucks.com/menu/product/2123425/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "temperatures": "Iced only (Tall/Grande/Venti)",
+        "milks": "All 12 standard milks (default: 2% Milk)",
+        "sweetenersDefaultGrande": "2 pumps Classic Syrup",
+        "espressoRoasts": ["Signature Espresso (default) + 5 other roast/decaf options"]
+      }
+    },
+    {
+      "baseId": "iced-brown-sugar-oatmilk-shaken-espresso",
+      "sources": [
+        "https://www.starbucks.com/menu/product/2123431/iced"
+      ],
+      "retrievedDate": "2026-11-20",
+      "observedCustomizationsForPhase2": {
+        "temperatures": "Iced only (Tall/Grande/Venti)",
+        "milks": "All 12 standard milks (default: Oatmilk)",
+        "flavorsDefaultGrande": "2 pumps Brown Sugar Syrup",
+        "toppingsDefault": "Cinnamon Powder (No/Light/Regular/Extra)",
+        "espressoRoasts": ["Blonde Espresso (default) + 5 other roast/decaf options"]
+      }
+    }
+  ]
+}

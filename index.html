@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbf4e8">
+  <title>DrinkMate</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cup.css">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>DrinkMate</h1>
+    <nav class="tab-bar" aria-label="Primary">
+      <button type="button" class="tab-btn active" data-tab="builder">Build</button>
+      <button type="button" class="tab-btn" data-tab="saved">Saved (<span id="saved-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <div id="load-error" class="notice notice-error" hidden></div>
+
+    <!-- BUILDER SCREEN -->
+    <section id="screen-builder" class="screen">
+      <div class="cup-stage" aria-live="polite">
+        <div id="cup-root"></div>
+        <p id="cup-caption" class="cup-caption"></p>
+      </div>
+
+      <div class="card">
+        <label class="field-label" for="chain-select">Coffee Chain</label>
+        <select id="chain-select" class="input-control"></select>
+      </div>
+
+      <div class="card">
+        <label class="field-label" for="base-select">Drink Base</label>
+        <select id="base-select" class="input-control"></select>
+
+        <div class="field-group">
+          <span class="field-label">Temperature</span>
+          <div id="temp-buttons" class="pill-row" role="group" aria-label="Temperature"></div>
+        </div>
+
+        <div class="field-group">
+          <span class="field-label">Size</span>
+          <div id="size-buttons" class="pill-row" role="group" aria-label="Size"></div>
+        </div>
+
+        <div id="unknown-defaults-notice" class="notice notice-warn" hidden>
+          Defaults unknown for this size — set your own below.
+        </div>
+      </div>
+
+      <div class="card">
+        <label class="field-label" for="milk-select">Milk</label>
+        <select id="milk-select" class="input-control"></select>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Modifiers</h2>
+        <div id="modifiers-list" class="modifiers-list"></div>
+      </div>
+
+      <div class="card">
+        <label class="field-label" for="drink-notes">Notes (optional)</label>
+        <textarea id="drink-notes" class="input-control" rows="2" placeholder="Any extra tweaks..."></textarea>
+
+        <label class="field-label" for="drink-name">Drink Name</label>
+        <input id="drink-name" class="input-control" type="text" placeholder="e.g., Morning Iced Latte" autocomplete="off">
+
+        <div class="action-row">
+          <button type="button" id="save-btn" class="btn-primary">Save Drink</button>
+          <button type="button" id="reset-btn" class="btn-secondary">Reset Defaults</button>
+        </div>
+        <div id="save-feedback" class="notice notice-ok" hidden></div>
+      </div>
+    </section>
+
+    <!-- SAVED DRINKS SCREEN -->
+    <section id="screen-saved" class="screen" hidden>
+      <div id="saved-list" class="saved-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="cup.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
